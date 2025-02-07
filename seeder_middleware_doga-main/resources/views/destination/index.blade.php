@@ -9,7 +9,12 @@
 @foreach ( $Destinations as $Destination)
     @csrf
     <div>{{$Destination -> destination}}</div>
-    
+    @if(auth()->check() && auth()->user()->is_User == 1)
+    <form  method="GET">
+        @csrf
+        <button type="submit">idk</button>
+    </form>
+    @endif
     @endforeach
 </body>
 </html>
