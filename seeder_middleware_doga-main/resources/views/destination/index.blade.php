@@ -10,7 +10,7 @@
     @csrf
     <div>{{$Destination -> destination}}</div>
     @if(auth()->check() && auth()->user()->is_User == 1)
-    <form  method="GET">
+    <form action="{{ route('destination.show', $Destination->id) }}" method="GET">
         @csrf
         <button type="submit">idk</button>
     </form>
