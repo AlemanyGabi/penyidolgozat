@@ -7,7 +7,7 @@ use App\Models\Destination;
 class DestinationController extends Controller
 {
     public function index(){
-        $Destinations = Destination::all()->get();
+        $Destinations = Destination::all();
         return view('destination.index', compact("Destinations")); 
     }
    

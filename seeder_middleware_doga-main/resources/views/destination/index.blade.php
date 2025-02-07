@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    dawdawd
+@foreach ( $Destinations as $Destination)
+    @csrf
+    <div>{{$Destination -> destination}}</div>
+    
+    @endforeach
 </body>
 </html>
